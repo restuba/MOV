@@ -1,0 +1,20 @@
+//===========GLOBAL VARIABLE==========//
+$color--default: "";
+$color--primary: #00838d;
+$color--secondary: "";
+$font-family: "Roboto", sans-serif;
+$font-size: 1rem;
+$font-color--primary: rgb(78, 78, 78);
+$font-color--iverse: "";
+$border-radius: "";
+$bg-color: #f3f3f3;
+
+@font-face {
+  font-family: Monsterrat;
+  src: url(../font/Montserrat-ExtraBold.ttf);
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(../font/Roboto-Regular.ttf);
+}

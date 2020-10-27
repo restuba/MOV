@@ -1,0 +1,1 @@
+export const RootPath = 'http://www.omdbapi.com/?apikey=172d23be';
