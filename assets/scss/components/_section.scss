@@ -2,38 +2,20 @@ section{
   width: 100%;  
   padding-bottom: 4rem;
   .result-container{
+    display: grid;
     @media (min-width: 1024px) {
       margin: 0 6rem;
     }
     padding: 2rem 4rem;
     grid-gap: 2rem;
     grid-template-rows: auto;
-    grid-template-columns: repeat(4, auto);
+    grid-template-columns: repeat(4, 25%);
     @media (max-width: 920px) {
       grid-template-columns: repeat(3, auto);
     }
     @media (max-width: 640px) {
       padding: 1.25rem;
       grid-template-columns: repeat(1, auto);
-    }
-  }
-  
-  .not-found{
-    border: 2px solid #ddd;
-    padding: 2rem;
-    text-align: center;
-    position: relative;    
-    h1{
-      font-size: 8rem;
-      font-weight: 900;
-      font-family: Monsterrat;
-      span{
-        letter-spacing: -20px;
-        -webkit-text-stroke: 6px $bg-color;
-      }
-    }
-    h4{
-      font-weight: 400;
     }
   }
   .content{
@@ -45,12 +27,13 @@ section{
     overflow: hidden;
     top: 0;
     z-index: 0;
+    cursor: pointer;
     &:before {
       content: "";
       position: absolute;
       z-index: 1;
-      top: -16px;
-      right: -16px;
+      top: -32px;
+      right: -32px;
       background: #00848d5d;    
       height: 32px;
       width: 32px;
@@ -83,11 +66,9 @@ section{
     }
     &:hover:after{
       visibility: visible;
-      opacity: 1;
-      
+      opacity: 1;      
       transition-delay: 0.2s;
-    }
-    cursor: pointer;
+    }    
     .content-wrapper{
       overflow: hidden;
       position: relative;
@@ -165,4 +146,12 @@ section{
       }
     }
   }
+}
+section{
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE 10+ */
+}
+section::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
 }

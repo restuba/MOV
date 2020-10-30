@@ -1,0 +1,50 @@
+.pagination-container{
+  display: none;
+  align-items: flex-end;
+  vertical-align: middle;
+  padding: 0rem 4rem;
+  @media (min-width: 1024px) {
+    margin: 0 6rem;
+  }
+  @media (max-width: 640px) {
+    padding: 0 1rem;
+  }
+  .pagination{
+    margin: auto;
+    @media (max-width: 640px) {
+      margin: 1rem auto;
+      width: 100%;
+    }
+    display: flex;
+    vertical-align: middle;
+    justify-content: space-between;
+    border-radius: 0.25rem;
+    button{
+      outline: none;
+      border-radius: 0.25rem;
+      border: 2px solid #ddd;
+      height: 40px; 
+      width: 40px;
+      cursor: pointer;
+      transition: 0.3s ease-in-out;
+    }
+    button:hover{
+      background-color: $color--primary;
+      color: white;
+    }
+    .prev::before{
+      content: '\2190';
+      margin-bottom: 4px;
+      display: block;
+    }
+    .next::after{
+      content: '\2192';
+      margin-bottom: 4px;
+      display: block;
+    }
+    .pages{
+      display: inline;
+      margin: auto 1rem;
+    }
+  }
+}
